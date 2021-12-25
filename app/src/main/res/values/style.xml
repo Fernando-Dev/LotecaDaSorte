@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TelaCheia" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="android:windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="EstiloTextoTitulo">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/text_size_16</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-black</item>
+    </style>
+
+    <style name="EstiloTextoSubititulo">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_14</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="EstiloRotuloCampos">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">@dimen/text_size_12</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="EstiloTextoDados">
+        <item name="android:textSize">@dimen/text_size_10</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background"></item>
+
+    </style>
+
+</resources>
