@@ -4,20 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.view.main.MainActivity">
+    tools:context=".ui.view.listaloterias.ListaLoterias">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_listar_loterias"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_lista_loterias"
         android:layout_width="0dp"
+        tools:listitem="@layout/item_loterias"
+        tools:itemCount="5"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_20"
         android:layout_marginTop="@dimen/margin_40"
         android:layout_marginEnd="@dimen/margin_20"
-        android:text="Loterias"
-        app:icon="@drawable/ic_teste_splash"
-        app:iconGravity="textStart"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
