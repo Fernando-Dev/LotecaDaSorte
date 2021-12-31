@@ -11,9 +11,12 @@ class ListaLoterias : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_loterias)
 
+        val adapter = ListaLoteriasAdapter()
+
         val recyclerView = findViewById<RecyclerView>(R.id.rv_lista_loterias)
         val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = adapter
 
 
     }
