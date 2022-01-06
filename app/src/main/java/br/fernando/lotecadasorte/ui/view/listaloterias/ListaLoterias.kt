@@ -14,6 +14,12 @@ class ListaLoterias : AppCompatActivity() {
         val adapter = ListaLoteriasAdapter()
 
         val recyclerView = findViewById<RecyclerView>(R.id.rv_lista_loterias)
+
+        /**
+         * esse codigo faz com que a recyclerview
+         * display os dados no sentido horizontal
+         *val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
+         */
         val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = adapter
