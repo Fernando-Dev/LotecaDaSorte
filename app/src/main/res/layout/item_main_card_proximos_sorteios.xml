@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_main_proximo_sorteio"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageview_status_premiacao"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:layout_marginEnd="@dimen/margin_40"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_teste_splash"
+            android:textAllCaps="true"
+            android:contentDescription="acumulou" />
+
+        <TextView
+            android:id="@+id/txt_nome_loteria_proximo_concurso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_centerHorizontal="true"
+            android:textAllCaps="true"
+            tools:text="Lotomania" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/txt_nome_loteria_proximo_concurso"
+            android:layout_toStartOf="@+id/txt_valor_premiacao"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="@dimen/margin_5"
+            android:textAllCaps="true"
+            tools:text="Valor:" />
+
+        <TextView
+            android:id="@+id/txt_valor_premiacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/imageview_status_premiacao"
+            android:layout_alignStart="@+id/txt_nome_loteria_proximo_concurso"
+            android:layout_alignBaseline="@+id/textView1"
+            android:textAllCaps="true"
+            tools:text="R$ 7 milhões" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/textView1"
+            android:layout_alignEnd="@+id/textView1"
+            android:textAllCaps="true"
+            tools:text="Próximo Concurso:" />
+
+        <TextView
+            android:id="@+id/txt_data_proximo_sorteio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/txt_valor_premiacao"
+            android:layout_alignStart="@+id/txt_valor_premiacao"
+            android:textAllCaps="true"
+            tools:text="27/11/2021" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/textView2"
+            android:layout_alignEnd="@+id/textView2"
+            android:textAllCaps="true"
+            tools:text="Número do Concurso:" />
+        <TextView
+            android:id="@+id/txt_numero_proximo_sorteio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_below="@+id/txt_data_proximo_sorteio"
+            android:layout_alignStart="@+id/txt_data_proximo_sorteio"
+            android:textAllCaps="true"
+            tools:text="2432" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
