@@ -1,14 +1,20 @@
 package br.fernando.lotecadasorte.ui.view.listaloterias
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.RecyclerView
 import br.fernando.lotecadasorte.R
+import br.fernando.lotecadasorte.model.NOME_LOTERIA
+import br.fernando.lotecadasorte.ui.view.listaloterias.adapter.LoteriasListaAdapter
+import br.fernando.lotecadasorte.ui.view.listaloterias.adapter.OnItemClickListener
+import br.fernando.lotecadasorte.ui.view.maischance.LoteriaMaisChanceActivity
 import br.fernando.lotecadasorte.viewmodel.listaloterias.LoteriasListaViewModel
 
-class LoteriasLista : AppCompatActivity() {
+class LoteriasLista : AppCompatActivity(), OnItemClickListener {
 
     private lateinit var loteriasListaViewModel: LoteriasListaViewModel
 
@@ -32,9 +38,11 @@ class LoteriasLista : AppCompatActivity() {
             recyclerViewLoterias.apply {
                 hasFixedSize()
 
+
 //                adapter da recyclerview recebendo os dados do paramentro do observer
 //                    que ja veio da viewmodel
-                adapter = LoteriasListaAdapter(list)
+//                capturando o item clicado pela implementacao da interface
+                adapter = LoteriasListaAdapter(list, this@LoteriasLista)
             }
         })
 
@@ -43,5 +51,11 @@ class LoteriasLista : AppCompatActivity() {
          * display os dados no sentido horizontal
          *val layoutManager:RecyclerView.LayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
          */
+    }
+
+    override fun onItemClick(loteriaNome: String) {
+        val intent = Intent(this, LoteriaMaisChanceActivity::class.java)
+        intent.putExtra(NOME_LOTERIA, loteriaNome)
+        startActivity(intent)
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="EstiloCard">
+    <style name="EstiloCardListaMenuLoterias">
         <item name="cardElevation">5dp</item>
         <item name="cardCornerRadius">20dp</item>
         <item name="cardBackgroundColor">@color/gray300</item>

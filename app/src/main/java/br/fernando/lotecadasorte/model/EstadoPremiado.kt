@@ -1,11 +1,11 @@
 package br.fernando.lotecadasorte.model
 
 data class EstadoPremiado(
-    private var id:Int,
-    private var nome:String,
-    private var uf:String,
-    private var vencedores:String,
-    private var latitude:String,
-    private var longitude:String,
-    private var cidades:ArrayList<Cidade>
+    var id:Int,
+    var nome:String,
+    var uf:String,
+    var vencedores:String,
+    var latitude:String,
+    var longitude:String,
+    var cidades:ArrayList<Cidade>
 )

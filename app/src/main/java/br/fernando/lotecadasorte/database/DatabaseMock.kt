@@ -102,11 +102,11 @@ class DatabaseHelperLoteriaMock {
         )
 
         val loteria2 = Loteria(
-            2, "mega-sena", "Mega-Sena", 2431,
+            2, "lotofacil", "Lotofácil", 2470,
             "24/11/2021", "ESPAÇO LOTERIAS", adicionaDezenaMock(),
             adicionaPremiacao(), adicionaEstadoPremiado(), false,
             "", "",
-            2028, "", ""
+            2471, "", ""
         )
 
         fun buscarTodosResultadoLoteria(): ArrayList<Loteria> {
@@ -114,6 +114,17 @@ class DatabaseHelperLoteriaMock {
             loterias.add(loteria1)
             loterias.add(loteria2)
             return loterias
+        }
+
+        fun buscarLoteria(id: Int): ArrayList<Loteria> {
+            var lot = ArrayList<Loteria>()
+            val loterias = buscarTodosResultadoLoteria()
+            for (loteria in loterias) {
+                if (id == loteria.id) {
+                    lot.add(loteria)
+                }
+            }
+            return lot
         }
 
 

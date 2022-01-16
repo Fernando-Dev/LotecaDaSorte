@@ -3,4 +3,13 @@
     <string name="name_app">Loteca da Sorte</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="mega_sena">Mega Sena</string>
+    <string name="lotofacil">Lotofácil</string>
+    <string name="quina">Quina</string>
+    <string name="lotomania">Lotomania</string>
+    <string name="timemania">Timemania</string>
+    <string name="dupla_sena">Dupla Sena</string>
+    <string name="dia_de_sorte">Dia de Sorte</string>
+    <string name="super_sete">Super Sete</string>
+    <string name="simbolo_loteria">simbolo loteria</string>
 </resources>

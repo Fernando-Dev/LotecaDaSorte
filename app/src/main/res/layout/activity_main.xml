@@ -8,9 +8,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <com.synnapps.carouselview.CarouselView
+        <!--<com.synnapps.carouselview.CarouselView
             android:id="@+id/carousel_proximos_sorteios"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -19,35 +19,270 @@
             android:layout_marginEnd="@dimen/margin_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recycleriew_proximos_sorteios"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-        </com.synnapps.carouselview.CarouselView>
-
-        <LinearLayout
-            android:id="@+id/menu_loterias"
-            android:layout_width="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/linha_menu_loterias"
+            app:layout_constraintTop_toTopOf="parent"/>-->
+        <GridLayout
+            android:id="@+id/linha_menu_loterias"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_20"
             android:layout_marginTop="@dimen/margin_40"
             android:layout_marginEnd="@dimen/margin_20"
-            android:orientation="vertical"
+            android:columnCount="4"
+            android:rowCount="4"
+            android:useDefaultMargins="true"
+            app:layout_constraintBottom_toTopOf="@+id/btn_listar_loterias"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/carousel_proximos_sorteios">
+            app:layout_constraintTop_toTopOf="parent">
 
             <!--        aqui dentro vai as linhas do menu-->
 
-        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_mega_sena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/mega_sena" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_lotofacil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lotofacil" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_quina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/quina" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_lotomania"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/lotomania" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_timemania"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/timemania" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_dupla_sena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/dupla_sena" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_loteria_federal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Loteria Federal" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_dia_de_sorte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/dia_de_sorte" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_super_sete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/simbolo_loteria"
+                    android:src="@drawable/ic_teste_splash" />
+
+                <TextView
+                    style="@style/EstiloRotuloCampos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/super_sete" />
+
+            </LinearLayout>
+
+
+        </GridLayout>
 
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_listar_loterias"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:padding="@dimen/margin_20"
             android:layout_marginStart="@dimen/margin_20"
             android:layout_marginTop="@dimen/margin_40"
             android:layout_marginEnd="@dimen/margin_20"
@@ -56,7 +291,7 @@
             app:iconGravity="textStart"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/menu_loterias" />
+            app:layout_constraintTop_toBottomOf="@+id/linha_menu_loterias" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>

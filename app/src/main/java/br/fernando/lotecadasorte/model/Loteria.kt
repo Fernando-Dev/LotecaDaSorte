@@ -1,20 +1,20 @@
 package br.fernando.lotecadasorte.model
 
 data class Loteria(
-    private var id: Int,
-    private var loteria: String,
-    private var nome: String,
-    private var concurso: Int,
-    private var data: String,
-    private var local: String,
-    private var dezenas: ArrayList<Dezena>,
-    private var premiacoes: ArrayList<Premiacao>,
-    private var estadosPremiados: ArrayList<EstadoPremiado>,
-    private var acumulou: Boolean,
-    private var acumuladaProximoSorteio: String,
-    private var dataProximoSorteio: String,
-    private var proximoSorteio: Int,
-    private var timeCoracao: String,
-    private var mesSorte: String
+    var id: Int,
+    var loteria: String,
+    var nome: String,
+    var concurso: Int,
+    var data: String,
+    var local: String,
+    var dezenas: ArrayList<Dezena>,
+    var premiacoes: ArrayList<Premiacao>,
+    var estadosPremiados: ArrayList<EstadoPremiado>,
+    var acumulou: Boolean,
+    var acumuladaProximoSorteio: String,
+    var dataProximoSorteio: String,
+    var proximoSorteio: Int,
+    var timeCoracao: String,
+    var mesSorte: String
 
 )

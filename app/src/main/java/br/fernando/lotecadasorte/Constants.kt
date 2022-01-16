@@ -12,6 +12,8 @@ const val DUPLA_SENA = "Dupla Sena"
 const val LOTERIA_FEDERAL = "Loteria Federal"
 const val DIA_DE_SORTE = "Dia de Sorte"
 const val SUPER_SETE = "Super Sete"
+const val ID_LOTERIA = "idLoteria"
+const val NOME_LOTERIA = "nomeLoteria"
 
 
 
