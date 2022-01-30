@@ -11,6 +11,7 @@ import br.fernando.lotecadasorte.R
 import br.fernando.lotecadasorte.model.NOME_LOTERIA
 import br.fernando.lotecadasorte.ui.view.listaloterias.adapter.LoteriasListaAdapter
 import br.fernando.lotecadasorte.ui.view.listaloterias.adapter.OnItemClickListener
+import br.fernando.lotecadasorte.ui.view.main.MainActivity
 import br.fernando.lotecadasorte.ui.view.maischance.LoteriaMaisChanceActivity
 import br.fernando.lotecadasorte.viewmodel.listaloterias.LoteriasListaViewModel
 
@@ -21,6 +22,8 @@ class LoteriasLista : AppCompatActivity(), OnItemClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lista_loterias)
+
+        title = "Aumente sua chance"
 
         val recyclerViewLoterias = findViewById<RecyclerView>(R.id.rv_lista_loterias)
 
@@ -57,5 +60,9 @@ class LoteriasLista : AppCompatActivity(), OnItemClickListener {
         val intent = Intent(this, LoteriaMaisChanceActivity::class.java)
         intent.putExtra(NOME_LOTERIA, loteriaNome)
         startActivity(intent)
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }

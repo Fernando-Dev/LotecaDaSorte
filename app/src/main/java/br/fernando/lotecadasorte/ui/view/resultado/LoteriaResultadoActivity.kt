@@ -1,11 +1,14 @@
 package br.fernando.lotecadasorte.ui.view.resultado
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import br.fernando.lotecadasorte.R
 import br.fernando.lotecadasorte.model.ID_LOTERIA
+import br.fernando.lotecadasorte.model.NOME_LOTERIA
+import br.fernando.lotecadasorte.ui.view.main.MainActivity
 import br.fernando.lotecadasorte.ui.view.resultado.adapter.LoteriaResultadoViewPagerAdapter
 import br.fernando.lotecadasorte.ui.view.resultado.fragments.ProximoSorteioFragment
 import br.fernando.lotecadasorte.ui.view.resultado.fragments.ResultadoFragment
@@ -31,6 +34,7 @@ class LoteriaResultadoActivity : AppCompatActivity() {
         val extra = intent.extras
         if (extra != null) {
             idExtraLoteria = extra.getInt(ID_LOTERIA)
+            title = extra.getString(NOME_LOTERIA)
         }
 
         tabLayout = findViewById(R.id.tab_loteria_resultado)
@@ -73,5 +77,9 @@ class LoteriaResultadoActivity : AppCompatActivity() {
 
 
         }
+    }
+
+    override fun onBackPressed() {
+        finish()
     }
 }

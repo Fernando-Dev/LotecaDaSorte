@@ -9,9 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LotecaDaSorte">
-        <activity android:name=".ui.view.resultado.LoteriaResultadoActivity"/>
-        <activity android:name=".ui.view.maischance.LoteriaMaisChanceActivity" />
-        <activity android:name=".ui.view.listaloterias.LoteriasLista" />
+        <activity
+            android:name=".ui.view.resultado.LoteriaResultadoActivity"
+            android:parentActivityName=".ui.view.main.MainActivity" />
+        <activity
+            android:name=".ui.view.maischance.LoteriaMaisChanceActivity"
+            android:parentActivityName=".ui.view.listaloterias.LoteriasLista" />
+        <activity
+            android:name=".ui.view.listaloterias.LoteriasLista"
+            android:parentActivityName=".ui.view.main.MainActivity" />
         <activity
             android:name=".ui.view.main.Splashscreen"
             android:exported="true"
