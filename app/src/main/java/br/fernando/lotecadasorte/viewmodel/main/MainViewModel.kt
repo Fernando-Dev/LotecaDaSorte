@@ -10,17 +10,16 @@ class MainViewModel : ViewModel() {
 
     private val dbHelper = DatabaseHelperLoteriaMock.Dao
 
-    private var mLoteria = MutableLiveData<Loteria>()
+    private var mListaLoteria = MutableLiveData<ArrayList<Loteria>>()
 
-    val loteria: LiveData<Loteria> = mLoteria
+    val listaLoterias: LiveData<ArrayList<Loteria>> = mListaLoteria
 
-    fun retornarLoteria(id: Int) {
-        mLoteria.value = buscarLoteriaId(id)
+    fun retornaTodasLoterias() {
+        mListaLoteria.value = buscarTodasLoterias()
     }
 
-    private fun buscarLoteriaId(id: Int): Loteria {
-        val lot = dbHelper.buscarLoteria(id)
-        return lot
+    private fun buscarTodasLoterias(): ArrayList<Loteria> {
+        return dbHelper.buscarTodosResultadoLoteria()
     }
 
 }

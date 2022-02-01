@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingStart="@dimen/margin_20"
+            android:paddingBottom="@dimen/padding_20"
             android:paddingTop="@dimen/margin_20"
             android:paddingEnd="@dimen/margin_20">
 
@@ -110,9 +111,13 @@
                     android:id="@+id/resultado_recyclerview_dezenas"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:spanCount="6"
+                    tools:itemCount="15"
+                    tools:listitem="@layout/item_resultado_dezenas" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -139,9 +144,12 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/margin_20"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/text5" />
+                    app:layout_constraintTop_toBottomOf="@id/text5"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_resultado_premiacoes" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

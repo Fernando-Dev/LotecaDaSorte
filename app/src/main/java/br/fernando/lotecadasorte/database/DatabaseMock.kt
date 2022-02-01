@@ -49,7 +49,16 @@ class DatabaseHelperLoteriaMock {
         private val dezena3 = Dezena(3, "22")
         private val dezena4 = Dezena(4, "25")
         private val dezena5 = Dezena(5, "26")
-        private val dezena6 = Dezena(6, "36")
+        private val dezena6 = Dezena(6, "46")
+        private val dezena7 = Dezena(6, "56")
+        private val dezena8 = Dezena(6, "66")
+        private val dezena9 = Dezena(6, "76")
+        private val dezena10 = Dezena(6, "16")
+        private val dezena11 = Dezena(6, "06")
+        private val dezena12 = Dezena(6, "36")
+        private val dezena13 = Dezena(6, "12")
+        private val dezena14 = Dezena(6, "23")
+        private val dezena15 = Dezena(6, "10")
 
         private val loteria1 = Loteria(
             1, "mega-sena", "Mega Sena", 2431,
@@ -138,6 +147,15 @@ class DatabaseHelperLoteriaMock {
             dezenas.add(dezena4)
             dezenas.add(dezena5)
             dezenas.add(dezena6)
+            dezenas.add(dezena7)
+            dezenas.add(dezena8)
+            dezenas.add(dezena9)
+            dezenas.add(dezena10)
+            dezenas.add(dezena11)
+            dezenas.add(dezena12)
+            dezenas.add(dezena13)
+            dezenas.add(dezena14)
+            dezenas.add(dezena15)
             return dezenas
         }
 
@@ -145,12 +163,15 @@ class DatabaseHelperLoteriaMock {
             val cidades = ArrayList<Cidade>()
             cidades.add(cidade1)
             cidades.add(cidade2)
+            cidades.add(cidade2)
             return cidades
         }
 
         fun adicionaPremiacao(): ArrayList<Premiacao> {
             val premiacoes = ArrayList<Premiacao>()
             premiacoes.add(premiacao1)
+            premiacoes.add(premiacao1)
+            premiacoes.add(premiacao2)
             premiacoes.add(premiacao2)
             return premiacoes
         }
