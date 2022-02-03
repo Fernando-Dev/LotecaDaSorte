@@ -8,7 +8,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import br.fernando.lotecadasorte.R
 
-class MainActivityViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class MainActivityMenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     var logoLoteria: ImageView = itemView.findViewById(R.id.imageview_main_logo_loteria)
     var nomeLoteria: TextView = itemView.findViewById(R.id.txt_main_nome_loteria)

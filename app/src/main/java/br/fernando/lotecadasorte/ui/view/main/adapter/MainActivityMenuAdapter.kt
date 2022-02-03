@@ -6,22 +6,22 @@ import androidx.recyclerview.widget.RecyclerView
 import br.fernando.lotecadasorte.R
 import br.fernando.lotecadasorte.model.Loteria
 
-class MainActivityAdapter(
+class MainActivityMenuAdapter(
     private val listaLoterias: ArrayList<Loteria>,
     private val listener: OnItemClickListener
-) : RecyclerView.Adapter<MainActivityViewHolder>() {
+) : RecyclerView.Adapter<MainActivityMenuViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainActivityViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainActivityMenuViewHolder {
 
         val view  = LayoutInflater.from(parent.context).inflate(R.layout.item_main_menu_loteria, parent, false)
-        return MainActivityViewHolder(view)
+        return MainActivityMenuViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: MainActivityViewHolder, position: Int) {
+    override fun onBindViewHolder(holderMenu: MainActivityMenuViewHolder, position: Int) {
 
-        holder.nomeLoteria.text = listaLoterias[position].nome
+        holderMenu.nomeLoteria.text = listaLoterias[position].nome
 
-        holder.rowMainMenu.setOnClickListener {
+        holderMenu.rowMainMenu.setOnClickListener {
             listener.onItemClick(listaLoterias[position].id, listaLoterias[position].nome)
         }
     }

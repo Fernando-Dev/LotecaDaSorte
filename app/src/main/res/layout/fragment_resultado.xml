@@ -134,6 +134,7 @@
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Premiações"
+                    android:background="@drawable/background_textview"
                     android:textAllCaps="true"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

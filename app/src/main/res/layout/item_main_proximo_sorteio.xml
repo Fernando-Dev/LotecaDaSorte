@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_20"
+    android:layout_marginEnd="@dimen/margin_20"
+    app:cardElevation="5dp"
+    app:cardBackgroundColor="@color/purple_500">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:padding="@dimen/padding_20"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_nome_loteria_lista_proximo_sorteio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Mega Sena" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acumulado: "
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nome_loteria_lista_proximo_sorteio" />
+
+        <TextView
+            android:id="@+id/txt_acumulado_loteria_lista_proximo_sorteio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text1"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nome_loteria_lista_proximo_sorteio"
+            tools:text="SIM" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Valor Acumulado: "
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_acumulado_loteria_lista_proximo_sorteio" />
+
+        <TextView
+            android:id="@+id/txt_valor_acumulado_loteria_lista_proximo_sorteio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text2"
+            app:layout_constraintTop_toBottomOf="@+id/txt_acumulado_loteria_lista_proximo_sorteio"
+            tools:text="R$ 3 Milhões" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Próximo Concurso: "
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_valor_acumulado_loteria_lista_proximo_sorteio" />
+
+        <TextView
+            android:id="@+id/txt_numero_concurso_loteria_lista_proximo_sorteio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_valor_acumulado_loteria_lista_proximo_sorteio"
+            tools:text="1234" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data do Concurso: "
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_numero_concurso_loteria_lista_proximo_sorteio" />
+
+        <TextView
+            android:id="@+id/txt_data_concurso_loteria_lista_proximo_sorteio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text3"
+            app:layout_constraintTop_toBottomOf="@+id/txt_numero_concurso_loteria_lista_proximo_sorteio"
+            tools:text="21/11/2021" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
