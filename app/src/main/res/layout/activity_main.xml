@@ -9,6 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="40dp"
         android:layout_marginStart="@dimen/margin_20"
         android:layout_marginTop="@dimen/margin_20"
         android:layout_marginEnd="@dimen/margin_20"
@@ -69,6 +70,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_40"
+            android:layout_marginBottom="@dimen/margin_20"
             android:padding="@dimen/margin_20"
             android:text="Aumente sua Chance"
             app:icon="@drawable/ic_teste_splash"
