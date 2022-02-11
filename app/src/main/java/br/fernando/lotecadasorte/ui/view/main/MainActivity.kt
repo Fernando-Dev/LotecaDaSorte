@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
     private lateinit var mMainViewModel: MainViewModel
     private lateinit var mRecyclerViewMenuLoterias: RecyclerView
     private lateinit var mRecyclerViewProximosSorteios: RecyclerView
-    private var duration: Long = 5000
+    private var duration: Long = 1000
     private var pixelsToMove: Int = 500
 
 
@@ -59,35 +59,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 adapter = MainActivityProximoSorteioAdapter(list)
                 val snapHelper = LinearSnapHelper()
                 snapHelper.attachToRecyclerView(mRecyclerViewProximosSorteios)
-                val mHandler: Handler = Handler(Looper.getMainLooper())
-                val SCROLLING_RUNNABLE = object : Runnable {
-                    override fun run() {
-                        mRecyclerViewProximosSorteios.smoothScrollBy(pixelsToMove, 0)
-                        mHandler.postDelayed(this, duration)
-                    }
-                }
-                addOnScrollListener(object : RecyclerView.OnScrollListener() {
-                    override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                        super.onScrolled(recyclerView, dx, dy)
-
-                        if (dx > 0) {
-                            Log.i(localClassName, "valor do deslocamento" + dx.toString())
-                            if (isLastVisable(MainActivityProximoSorteioAdapter(list))) {
-                                mHandler.removeCallbacks(SCROLLING_RUNNABLE)
-                                val postHandler = Handler(Looper.myLooper()!!)
-                                postHandler.postDelayed(object : Runnable {
-                                    override fun run() {
-                                        adapter = null
-                                        adapter = MainActivityProximoSorteioAdapter(list)
-                                        mHandler.postDelayed(SCROLLING_RUNNABLE, 2000)
-                                    }
-                                }, 2000)
-                            }
-                        }
-
-                    }
-                })
-                mHandler.postDelayed(SCROLLING_RUNNABLE, 2000)
             }
 
             mRecyclerViewMenuLoterias.apply {
@@ -96,13 +67,6 @@ class MainActivity : AppCompatActivity(), OnItemClickListener {
                 adapter = MainActivityMenuAdapter(list, this@MainActivity)
             }
         })
-    }
-
-    private fun isLastVisable(adapter: MainActivityProximoSorteioAdapter): Boolean {
-        val layoutManager = mRecyclerViewProximosSorteios.layoutManager as LinearLayoutManager
-        val pos = layoutManager.findLastVisibleItemPosition()
-        val numItems = adapter.itemCount
-        return (pos >= numItems - 1)
     }
 
     override fun onItemClick(id: Int, nomeLoteria: String) {
