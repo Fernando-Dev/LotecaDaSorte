@@ -30,4 +30,6 @@
     <dimen name="padding_20">20dp</dimen>
     <dimen name="radius_size_5">5dp</dimen>
     <dimen name="stroke_size_2dp">2dp</dimen>
+    <dimen name="_3dp">3dp</dimen>
+    <dimen name="_40dp">40dp</dimen>
 </resources>

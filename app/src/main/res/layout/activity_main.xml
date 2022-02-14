@@ -9,25 +9,34 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingBottom="40dp"
         android:layout_marginStart="@dimen/margin_20"
         android:layout_marginTop="@dimen/margin_20"
         android:layout_marginEnd="@dimen/margin_20"
-        android:layout_marginBottom="@dimen/margin_20">
+        android:layout_marginBottom="@dimen/margin_20"
+        android:paddingBottom="40dp">
 
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/main_recycler_proximos_sorteios"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/main_view_pager_proximos_sorteios"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/main_tab_proximos_sorteios"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/main_tab_proximos_sorteios"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_marginTop="@dimen/margin_5"
             app:layout_constraintBottom_toTopOf="@+id/text_label"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:itemCount="2"
-            tools:listitem="@layout/item_main_proximo_sorteio" />
+            app:layout_constraintTop_toBottomOf="@+id/main_view_pager_proximos_sorteios"
+            app:tabBackground="@drawable/main_tab_pager_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/text_label"
@@ -36,7 +45,7 @@
             android:layout_marginTop="@dimen/margin_20"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/main_recycler_proximos_sorteios">
+            app:layout_constraintTop_toBottomOf="@id/main_tab_proximos_sorteios">
 
             <TextView
                 android:layout_width="wrap_content"
